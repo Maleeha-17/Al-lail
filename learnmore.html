@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Raed Al Lail Technical Services</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #000000bd;
+      color: #fff;
+    }
+    .head{
+      text-align: center;
+    }
+
+    .about-container {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 1100px;
+      margin: 50px auto;
+      background: #222;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+
+    .about-container img {
+      width: 100%;
+      max-width: 550px;
+      object-fit: cover;
+    }
+
+    .about-text {
+      flex: 1;
+      padding: 40px;
+    }
+
+    .about-text h2 {
+      font-size: 28px;
+      margin-bottom: 15px;
+      color: #fff;
+    }
+
+    .about-text p {
+      line-height: 1.7;
+      margin-bottom: 20px;
+      color: #ddd;
+    }
+     .btn-learn {
+    background-color: black;
+    color: white;
+    margin-top: 2rem;
+    display: inline-block;
+    font-size: 1.2rem;
+    padding: 10px 15px;
+    border: 2px solid white;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+.btn-learn:hover {
+    background-color: white;
+    color: black;
+}
+
+    /* faq */
+    .faq-container {
+      max-width: 700px;
+      margin: auto;
+    }
+    .faq-item {
+      background: #1a1a1a;
+      margin: 10px 0;
+      border-radius: 5px;
+      overflow: hidden;
+      border: 1px solid #333;
+    }
+    .faq-question {
+      padding: 15px;
+      cursor: pointer;
+      font-size: 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      padding: 0 15px;
+      font-size: 16px;
+      transition: max-height 0.3s ease, padding 0.3s ease;
+      color: #ddd;
+    }
+    .faq-item.active .faq-answer {
+      max-height: 200px;
+      padding: 15px;
+    }
+    .arrow {
+      transition: transform 0.3s;
+    }
+    .faq-item.active .arrow {
+      transform: rotate(180deg);
+    }
+     footer {
+      background: #0d0d0d;
+      color: #fff;
+      padding: 50px 20px;
+    }
+
+    .footer-container {
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .footer-logo h2 {
+      color: #2b1f18;
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+
+    .footer-logo p {
+      color: #ccc;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .footer-links h3,
+    .footer-contact h3,
+    .footer-newsletter h3 {
+      margin-bottom: 15px;
+      font-size: 18px;
+      color: #fff;
+    }
+
+    .footer-links ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-links ul li {
+      margin: 8px 0;
+    }
+
+    .footer-links ul li a {
+      color: #ccc;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .footer-links ul li a:hover {
+      color: #362519;
+    }
+
+    .footer-contact p {
+      margin: 8px 0;
+      color: #ccc;
+      font-size: 14px;
+    }
+
+    .footer-newsletter input {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+
+    .footer-newsletter button {
+      background: hsl(24, 38%, 18%);
+      border: none;
+      padding: 10px;
+      width: 100%;
+      border-radius: 5px;
+      color: #fff;
+      font-size: 14px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .footer-newsletter button:hover {
+      background: #53321c;
+    }
+
+    .social-icons {
+      margin-top: 15px;
+    }
+
+    .social-icons a {
+      display: inline-block;
+      margin-right: 12px;
+      color: #fff;
+      font-size: 20px;
+      transition: 0.3s;
+      text-decoration: none;
+    }
+
+    .social-icons a:hover {
+      color: #412919;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      margin-top: 30px;
+      border-top: 1px solid #333;
+      padding-top: 15px;
+      font-size: 14px;
+      color: #aaa;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .about-container {
+        flex-direction: column;
+      }
+      .about-container img {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+<h1 class="head">ABOUT US</h1>
+ <div class="about-container">
+    <img src="./img9.jpg" alt="Modern Interior Design">
+    <div class="about-text">
+      <h2>Expert Technical Services in Dubai for Homes & Offices</h2>
+      <p>
+         At <strong> Raed Al Lail Technical Services</strong>, we pride ourselves on delivering professional solutions for every home and office in Dubai.
+Our team is equipped with the skills and experience to handle <strong>, plumbing, electrical, and renovation </strong> projects of any size.
+
+ 
+        
+      </p>
+      <p>
+       We enhance comfort, safety, and value for your property.
+Affordable, reliable, and transparent service is our promise.
+Available for both residential and commercial clients in Dubai.
+Trust us for expert solutions that make life easier.
+Your satisfaction is always our number one priority.
+      </p>
+      <a href="company.html" class="btn-learn">GO HOME</a>
+    </div>
+  </div> 
+
+
+   <div class="about-container">
+    <img src="./img2.jpg" alt="Modern Interior Design">
+    <div class="about-text">
+      <h2>Reliable Painting, Plumbing & Electrical Solutions in Dubai</h2>
+      <p>
+        Looking for trusted painting, plumbing, and electrical services in Dubai? We’ve got you covered.
+Our painting experts bring vibrant finishes that last in Dubai’s climate.
+Plumbing services include leak repairs, installations, and maintenance.
+Electrical experts ensure safety, efficiency, and modern upgrades.
+We handle everything from lighting to power systems.
+      </p>
+      <p>
+        Each service is carried out by trained professionals.
+Emergency repairs are available 24/7 for your convenience.
+We keep pricing transparent and affordable.
+Our goal is to save you time and stress.
+Choose Raed Al Lail for reliable technical services.
+      </p>
+      <a href="company.html" class="btn-learn">GO HOME</a>
+    </div>
+  </div>
+
+
+   <div class="about-container">
+    <img src="./bathroom-809820_1280.jpg" alt="Modern Interior Design">
+    <div class="about-text">
+      <h2>Transform Your Villa or Apartment with Renovation Services</h2>
+      <p>
+        Upgrade your villa or apartment in Dubai with our expert renovation team.
+We design modern, functional, and stylish spaces tailored to you.
+From kitchens to bathrooms, every detail is handled professionally.
+We use top-quality materials for long-lasting results.
+Our team avoids delays, hidden costs, and poor workmanship.
+      </p>
+      <p>
+       Renovations are planned carefully for maximum efficiency.
+We add value and beauty to your property.
+Energy-efficient and modern design solutions are our specialty.
+Your vision is our blueprint for every project.
+Raed Al Lail delivers renovations that transform lifestyles.
+      </p>
+      <a href="company.html" class="btn-learn">GO HOME</a>
+    </div>
+  </div>
+
+
+ <div class="about-container">
+    <img src="./img7.jpg" alt="Modern Interior Design">
+    <div class="about-text">
+      <h2>Trusted Dubai Handyman & Maintenance Experts</h2>
+      <p>
+     For quick fixes or long-term care, our handyman services in Dubai are the best choice.
+We cover plumbing, electrical, painting, and carpentry tasks.
+Our team is punctual, skilled, and reliable.
+We solve everyday problems with professional solutions.
+Emergency services are available whenever you need us
+      </p>
+      <p>
+       We provide affordable maintenance packages for all properties.
+Our goal is to save you money and stress.
+No job is too small or too big for us.
+We focus on quality, safety, and customer satisfaction.
+Raed Al Lail is your reliable handyman in Dubai.
+      </p>
+      <a href="company.html" class="btn-learn">GO HOME</a>
+    </div>
+  </div>
+
+
+   <div class="about-container">
+    <img src="./home-1622401_1280.jpg" alt="Modern Interior Design">
+    <div class="about-text">
+      <h2>Raed Al Lail Technical Services – Quality & Excellence</h2>
+      <p>
+     At Raed Al Lail Technical Services, quality meets innovation.
+We provide painting, plumbing, electrical, and renovation services.
+Our mission is to improve homes and offices in Dubai.
+Every project is handled with care and transparency.
+We use advanced tools and follow safety standards.
+      </p>
+      <p>
+       Customer trust and satisfaction are at the core of our work.
+We deliver on time with no hidden costs.
+Available 24/7 for emergency technical services.
+Affordable, reliable, and professional solutions every time.
+Choose us for excellence in every detail.
+      </p>
+      <a href="company.html" class="btn-learn">GO HOME</a>
+    </div>
+  </div>
+
+
+
+  <div class="faq-container">
+    <h2>People Also Ask</h2>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>1. What are the most common plumbing problems in Dubai homes?</span>
+        <span class="arrow">▼</span>
+      </div>
+      <div class="faq-answer">
+        Leaky taps, clogged drains, and low water pressure are common. Raed Al Lail Technical Services provides fast, reliable plumbing solutions.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>2. How often should I repaint my villa or apartment in Dubai?</span>
+        <span class="arrow">▼</span>
+      </div>
+      <div class="faq-answer">
+       Most homes need repainting every 3–5 years. Raed Al Lail Technical Services uses high-quality paints for long-lasting results
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>3. Why should I hire professional electricians in Dubai instead of DIY?</span>
+        <span class="arrow">▼</span>
+      </div>
+      <div class="faq-answer">
+        DIY electrical work is unsafe. Raed Al Lail Technical Services offers licensed electricians to ensure safety and proper installation.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>4. What are the benefits of renovating my apartment in Dubai?</span>
+        <span class="arrow">▼</span>
+      </div>
+      <div class="faq-answer">
+       Renovations boost comfort and property value. Raed Al Lail Technical Services delivers modern, tailored renovation solutions.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>5. Do you offer emergency technical services in Dubai?</span>
+        <span class="arrow">▼</span>
+      </div>
+      <div class="faq-answer">
+      Yes, Raed Al Lail Technical Services provides 24/7 emergency plumbing, electrical, and repair services across Dubai.
+      </div>
+    </div>
+  </div>
+
+  <!-- footer -->
+    <footer>
+    <div class="footer-container">
+
+      <div class="footer-logo">
+        <h2>Dubai Tech Services</h2>
+        <p>Your trusted partner for Painting, Plumbing, Electrical, and Renovation services across Dubai.</p>
+      </div>
+
+      <div class="footer-contact">
+        <h3>Contact Us</h3>
+        <p>📍 Dubai, UAE</p>
+        <p>📞  0558520257</p>
+        <p>📧 support@dubaitechservices.com</p>
+        <div class="social-icons">
+          <a href="https://wa.me/ 0558520257" target="_blank"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://facebook.com/yourpage" target="_blank"><i class="fab fa-facebook"></i></a>
+          <a href="https://instagram.com/yourpage" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://linkedin.com/company/yourcompany" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-newsletter">
+        <h3>Newsletter</h3>
+        <p>Subscribe for updates & offers.</p>
+        <input type="email" placeholder="Enter your email">
+        <button>Subscribe</button>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      © 2025 Dubai Tech Services | All Rights Reserved.
+    </div>
+  </footer>
+
+  <!-- footer end  -->
+  <script>
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    faqItems.forEach(item => {
+      item.querySelector('.faq-question').addEventListener('click', () => {
+        item.classList.toggle('active');
+      });
+    });
+  </script>
+  <script>
+     // letter form validation
+    const newsletterForm = document.querySelector(".footer-newsletter");
+    const emailInput = newsletterForm.querySelector("input");
+    const subscribeBtn = newsletterForm.querySelector("button");
+
+    subscribeBtn.addEventListener("click", function () {
+      const email = emailInput.value.trim();
+      const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+      if (email === "") {
+        alert("⚠️ Please enter your email.");
+      } else if (!email.match(emailPattern)) {
+        alert("❌ Please enter a valid email address.");
+      } else {
+        alert("✅ Thank you for subscribing!");
+        emailInput.value = ""; // clear input
+      }
+    });
+
+    // Auto update year
+    const footerYear = document.querySelector(".footer-bottom");
+    const currentYear = new Date().getFullYear();
+    footerYear.innerHTML = `© ${currentYear} Dubai Raed Al lail  Tech Services | All Rights Reserved.`;
+
+    </script>
+</body>
+</html>
+
+
